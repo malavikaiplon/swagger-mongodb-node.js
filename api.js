@@ -71,6 +71,7 @@ app.put("/Employee/:EmployeeId", async(req, res) => {
         message: 'Employee not found',
       });
     }
+  const filter = {id:id};
     const updateDoc = {
         $set: {
         id: parseInt(req.params.EmployeeId, 10),
